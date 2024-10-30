@@ -1,9 +1,5 @@
 #!/usr/bin/env python3
 
-"""Basic caching"""
-from collections import OrderedDict
-from base_caching import BaseCaching
-
 
 class BaseCaching:
     """BaseCaching defines a caching system"""
@@ -24,9 +20,3 @@ class BasicCache(BaseCaching):
         if key is None or key not in self.cache_data:
             return None
         return self.cache_data[key]
-
-    def print_cache(self):
-        """Print the current cache data"""
-        print("Current Cache Data:")
-        for key, value in self.cache_data.items():
-            print(f"{key}: {value}")
