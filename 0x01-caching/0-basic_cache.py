@@ -1,5 +1,9 @@
 #!/usr/bin/env python3
 
+"""Basic caching"""
+from collections import OrderedDict
+from base_caching import BaseCaching
+
 
 class BaseCaching:
     """BaseCaching defines a caching system"""
