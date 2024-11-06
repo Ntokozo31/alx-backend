@@ -45,13 +45,15 @@ class Server:
         """Return a dictionary with paginated data."""
         if index is None:
             index = 0
+
         dataset = self.dataset()
+        dataset_length = len(dataset)
+
         assert isinstance(index, int) and index >= 0
         assert isinstance(page_size, int) and page_size > 0
-
+        assert index < dataset_length
         data = []
         current_index = index
-        dataset_length = len(dataset)
 
         while len(data) < page_size and current_index < dataset_length:
             if dataset[current_index]:
