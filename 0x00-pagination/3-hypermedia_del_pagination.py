@@ -41,7 +41,7 @@ class Server:
         return self.__indexed_dataset
 
     def get_hyper_index(
-        self, index: Optional[int] = None, page_size: int = 10
+        self, index: int = None, page_size: int = 10
     ) -> Dict[str, Optional[int]]:
         """Return a dictionary with paginated data."""
         if index is None:
