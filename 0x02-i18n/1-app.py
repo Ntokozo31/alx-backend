@@ -7,6 +7,8 @@ This module setup basic babel
 
 from flask import Flask, render_template
 from flask_babel import Babel
+from flask.typing import ResponseReturnValue
+
 
 app: Flask = Flask(__name__)
 
@@ -23,7 +25,7 @@ babel = Babel(app)
 
 
 @app.route('/')
-def index():
+def index() -> ResponseReturnValue:
     return render_template("1-index.html")
 
 
